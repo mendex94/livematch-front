@@ -8,7 +8,7 @@ type Props = {
 function Navbar({ path }: Props) {
     return (
         <nav className="p-2 bg-[#111] flex text-md font-bold pt-14">
-            <div className="container mx-auto flex justify-between items-center max-w-5xl text-xl border-b border-neutral-700 pb-2">
+            <div className="container mx-auto flex justify-between items-center max-w-5xl text-xl">
                 <div className="flex items-center hover:cursor-pointer">
                     <SoccerBall
                         size={32}

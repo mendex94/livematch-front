@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Layout router={router}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Hydrate state={pageProps.dehydratedState}>
+          <Component {...pageProps} />
+        </Hydrate>
         <ReactQueryDevtools />
       </QueryClientProvider>
     </Layout>

@@ -1,0 +1,2 @@
+export const getLiveMatchesData = async () => await (await fetch('https://livematch-api.herokuapp.com/livematch')).json();
+export const getMatchesData = async () => await (await fetch('https://livematch-api.herokuapp.com/match')).json();
